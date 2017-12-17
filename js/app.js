@@ -90,14 +90,13 @@ for(let i = 0; i < btnLetter.length; i++ ){
 function restart() {
 	missed = 0;
 	ulPhrase.innerHTML = '';
-	for (var i = 0; i <img.length; i++) {
+	for (let i = 0; i <img.length; i++) {
 	 	img[i].src = "images/liveHeart.png";
 	}
-	for (var i = 0; i < btnLetter.length; i++) {
-		btnLetter[i].className = '';
+	for (let i = 0; i < btnLetter.length; i++) {
+		btnLetter[i].classList.remove('chosen');
 		btnLetter[i].disabled = false;
 	}
 	let phrase = getRandomPhraseArray(phrases);
-	console.log(phrase);
 	addPhraseToDisplay(phrase);
 }
